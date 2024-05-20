@@ -38,15 +38,15 @@ body{
 }
 
 .nav_ul li{
-  background-color: var(--mainColor);
-  padding: 5px 10px;
   cursor: pointer;
   width: fit-content;
-  border-radius: 8px;
 }
 
 .nav_ul li span{
-  color: white;
+  color: rgb(40, 40, 40);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .nav_btn{
@@ -66,9 +66,9 @@ body{
   width: fit-content;
   padding: 5px 10px;
   cursor: pointer;
-  color: white;
+  color: rgb(40, 40, 40);
   font-weight: bolder;
-  background-color: var(--mainColor);
+  font-size: 22px;
   border-radius: 8px;
 }
 
@@ -137,13 +137,12 @@ body{
 .slider{
   position: relative;
   display: flex;
-  position: absolute;
   background-color: antiquewhite;
   width: 100%;
   padding: 50px 30px 30px 30px;
   overflow: scroll;
   gap: 20px;
-  margin: 150px 0;
+  margin: 50px 0;
 }
 
 .slider-p{
@@ -251,13 +250,13 @@ body{
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ddd;
-  background-color: #f9f9f9;
+  background-color: #e9e9e9;
   width: 80%;
   margin: 0 auto;
 }
 
 .comment img {
-  max-width: 100%;
+  width: 50px;
   height: auto;
 }
 
@@ -267,7 +266,6 @@ body{
 
 .comments-container {
   padding: 20px;
-  background-color: #f0f0f0;
 }
 
 
