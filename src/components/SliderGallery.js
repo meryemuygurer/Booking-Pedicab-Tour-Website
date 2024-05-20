@@ -25,8 +25,8 @@ function SliderGallery() {
         <div className="slider">
             <p className='slider-p '>Discover The Magic Of Central Park</p>
             {Pictures.map((picture, index) => (
-                <div className={`slider-item ${index === activeIndex ? 'slider-item-active' : ''} `}>
-                    <img className={`${activeIndex === index ? "bigger-img" : activeIndex === null ? "slider-img" : "hidden"}`} key={index} src={picture.src} alt={picture.alt} onClick={() => handleClick(index)} />
+                <div className={`slider-item ${index === activeIndex ? 'slider-item-active' : ''} `} key={index}>
+                    <img className={`${activeIndex === index ? "bigger-img" : activeIndex === null ? "slider-img" : "hidden"}`}  src={picture.src} alt={picture.alt} onClick={() => handleClick(index)} />
                 </div>
             ))}
             {activeIndex !== null && (
