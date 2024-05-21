@@ -17,10 +17,11 @@ function Comment({text, src, alt, name, maxLength = 100}) {
             <div className="row">
                 <img src={src} alt={alt} ></img>
                 <span className="comment-name"> {name} </span>
+                <span className="lighter-span"> &nbsp;• 2024</span>
             </div>
-            <p>{displayText}</p>
+            <p className="display-text">{displayText}</p>
             {shouldTruncate && (
-                <button onClick={toggleExpand}>
+                <button className="readmore-button" onClick={toggleExpand}>
                   {isExpanded ? 'Read less' : 'Read more'}
                 </button>
             )}

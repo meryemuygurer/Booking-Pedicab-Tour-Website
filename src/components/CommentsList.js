@@ -1,9 +1,6 @@
 import React from "react";
 import Comment from "./Comment"
-
-const CommentData = [
-    {'src':'../../public/CommentImages/comment-img-1.png', 'text': 'abcolsakxsa xxn*paoxğpsaxşlsax kxopsakxoalxa kxoaspkoxax xoaskpxpalsxaslxğal', 'name': 'name', 'alt': 'abcdef'}
-]
+import CommentData from "../CommentData";
 
 function CommentsList() {
     return(

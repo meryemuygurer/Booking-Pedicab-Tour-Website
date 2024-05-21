@@ -110,10 +110,40 @@ body{
 }
 
 .booking-button{
+  position: relative; /* Gereklidir, böylece ::before bu butona göre konumlandırılır */
+  display: inline-block;
+  overflow: hidden;
   font-size: 20px;
   padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
+  transition: ease-out 0.3s;
+  width: fit-content;
+  z-index: 1;
+  box-shadow: inset 0 0 0 0 red;
+}
+
+.booking-button:hover{
+  box-shadow: inset 300px 0 0 0 red;
+}
+
+.booking-button .animation {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 0.5s ease; /* Animasyon efekti */
+  transform: scaleX(0);
+  transform-origin: right;
+  z-index: 3;
+}
+
+.booking-button:hover .animation {
+  transform: scaleX(1); /* Hover olduğunda genişleme animasyonu */
+  transform-origin: left;
 }
 
 .banner-booking-div{
@@ -137,12 +167,14 @@ body{
 .slider{
   position: relative;
   display: flex;
-  background-color: antiquewhite;
+  background-color: #e9e9e9;
   width: 100%;
   padding: 50px 30px 30px 30px;
   overflow: scroll;
   gap: 20px;
   margin: 50px 0;
+  box-shadow: 0 1px 1px rgb(230, 230, 230);
+
 }
 
 .slider-p{
@@ -252,7 +284,8 @@ body{
   border: 1px solid #ddd;
   background-color: #e9e9e9;
   width: 80%;
-  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 15px;
 }
 
 .comment img {
@@ -260,15 +293,41 @@ body{
   height: auto;
 }
 
-.comment p {
-  margin: 10px 0;
-}
-
 .comments-container {
   padding: 20px;
 }
 
+.row{
+  display: flex;
+  align-items: center;
+}
 
+p{
+  text-align: center;
+}
+
+.lighter-span{
+  color: gray;
+  font-size: 12px;
+}
+
+.display-text{
+  text-align: left;
+  margin: 10px 0 13px 5px;
+}
+
+.readmore-button{
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid gray;
+  transition: 0.3s;
+}
+
+.readmore-button:hover{
+  background-color: rgb(179, 177, 177);
+  transition: 0.3s;
+}
 
 @media only screen and (max-width: 1024px) {
   .nav_btn{
