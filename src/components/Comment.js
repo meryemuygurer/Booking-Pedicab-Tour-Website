@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-function Comment({text, src, alt, name, maxLength = 100}) {
+function Comment({text, src, alt, name, maxLength = 300}) {
     const [isExpanded, SetIsExpanded] = useState(false);
 
     const toggleExpand = () => {
@@ -9,8 +9,6 @@ function Comment({text, src, alt, name, maxLength = 100}) {
 
     const shouldTruncate = text.length > maxLength;
     const displayText = isExpanded ? text : shouldTruncate ? text.slice(0, maxLength) + '...' : text;
-
-    console.log('displayText:', displayText);  // Debugging için eklendi
 
     return(
         <div className="comment">

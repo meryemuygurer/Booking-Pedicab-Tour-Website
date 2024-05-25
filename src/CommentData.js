@@ -1,9 +1,10 @@
 const CommentData = [
-    {'src':'/CommentImages/comment-img-1.png', 'name': 'Sylwi Frohmann ', 'alt': 'Sylwi Frohmann image', 'text': `his summer we had a very great trip with (Night) our guide from "Night Your NYC 
+    {'src':'/CommentImages/comment-img-1.png', 'name': 'Sylwi Frohmann ', 'alt': 'Sylwi Frohmann image', 'text': `His summer we had a very great trip with (Night) our guide from "Night Your NYC 
     Guide". We agreed the 3 hrs tour upfront with some extra spots we want to visit. He picked us up at our Hard Rock Hotel in Manhattan. 
     The rickshaw/pedicab was in a very good condition (with free water) and it was so much fun to cruise thru the traffic of this great city.
     We made a lot of photo stops and we were able to see all the spots we requested. Additional showed us some very nice places on top. 
     It was such a great tour because was so Experiences and explained us so many things of NYC.
+    
     At the end we had a 4hrs trip with no extra charges and a great experience, with a very funny and safe guide. Immediately after our tour
     we received over 200 photos taken by our guide and more than 30 recommendations for very good restaurants, ice cream parlors, things to 
     do with kids in New York. 

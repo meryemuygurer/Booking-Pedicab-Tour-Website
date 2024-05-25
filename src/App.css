@@ -29,6 +29,8 @@ body{
 
 .sticky{
   background-color: white;
+  box-shadow: 0 1px 1px rgb(230, 230, 230);
+
 }
 
 .nav_ul{
@@ -45,7 +47,7 @@ body{
 .nav_ul li span{
   color: rgb(40, 40, 40);
   cursor: pointer;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
 }
 
@@ -231,6 +233,7 @@ body{
   z-index: 1000;
 }
 
+/*
 .slider-controls {
   position: fixed;
   top: 50%;
@@ -240,42 +243,41 @@ body{
   justify-content: space-between;
   width: 100%;
   padding: 0 20px;
-  z-index: 6;
-  
+  z-index: 1000; 
 }
+*/
 
 .close-btn,
 .prev-btn,
 .next-btn {
-  background: white;
   border: none;
-  padding: 10px;
   cursor: pointer;
-  font-size: 30px;
-  z-index: 10;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 50px;
+  z-index: 1001;
   transition: background 0.3s, transform 0.3s;
+  position: fixed;
+  text-align: center;
+  background-color: transparent;
 }
 
 .close-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  right: 9%;
+  width: 60px;
+  font-weight: bold;
 }
 
 .prev-btn {
-  position: fixed;
-  left: 220px;
+  left: 8%;
   top: 50%;
-  transform: translateY(-50%);
+  width: 60px;
 }
 
 .next-btn {
-  position: fixed;
-  right: 220px;
+  right: 8%;
   top: 50%;
-  transform: translateY(-50%);
+  width: 60px;
+  transform: rotate(180deg);
 }
 
 .comment {
@@ -294,7 +296,7 @@ body{
 }
 
 .comments-container {
-  padding: 20px;
+  padding: 30px;
 }
 
 .row{
@@ -327,6 +329,42 @@ p{
 .readmore-button:hover{
   background-color: rgb(179, 177, 177);
   transition: 0.3s;
+}
+
+.tour-information-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tour-information-item{
+  background-color: #e9e9e9;
+  width: 45%;
+  border-radius: 50% 50% 5% 5%;
+  text-align: center;
+}
+
+.tour-information-item img{
+  width: 100%;
+  border-radius: 50% 50% 0 0;
+}
+
+.tour-information-item p{
+  margin: 10px;
+}
+
+.quick-facts-container{
+  padding: 30px;
+}
+
+.quick-facts-container p{
+  text-align: left;
+  margin-left: 20px;
+}
+
+.quick-facts-element{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 1024px) {

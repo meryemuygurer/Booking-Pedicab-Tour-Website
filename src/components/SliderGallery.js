@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Pictures from '../Pictures';
-
 function SliderGallery() {
     
     const [activeIndex, setActiveIndex ] = useState(null)
@@ -31,9 +30,9 @@ function SliderGallery() {
             ))}
             {activeIndex !== null && (
                 <div className="slider-controls">
-                    <button className="close-btn" onClick={handleClose}>X</button>
-                    <button className="prev-btn" onClick={handlePrev}>&lt;</button>
-                    <button className="next-btn" onClick={handleNext}>&gt;</button>
+                    <button className="close-btn" onClick={handleClose}>&times;</button>
+                    <button className="prev-btn" onClick={handlePrev}>&#11013;</button>
+                    <button className="next-btn" onClick={handleNext}>&#11013;</button>
                 </div>
             )}
         </div>
