@@ -1,30 +1,17 @@
-import React, { useState } from "react"
+import React from "react";
+import ExpandableText from "./ExpandableText";
 
-function Comment({text, src, alt, name, maxLength = 300}) {
-    const [isExpanded, SetIsExpanded] = useState(false);
-
-    const toggleExpand = () => {
-        SetIsExpanded(!isExpanded);
-    };
-
-    const shouldTruncate = text.length > maxLength;
-    const displayText = isExpanded ? text : shouldTruncate ? text.slice(0, maxLength) + '...' : text;
-
-    return(
+function Comment({ text, src, alt, name, maxLength = 300 }) {
+    return (
         <div className="comment">
             <div className="row">
-                <img src={src} alt={alt} ></img>
+                <img src={src} alt={alt}></img>
                 <span className="comment-name"> {name} </span>
                 <span className="lighter-span"> &nbsp;• 2024</span>
             </div>
-            <p className="display-text">{displayText}</p>
-            {shouldTruncate && (
-                <button className="readmore-button" onClick={toggleExpand}>
-                  {isExpanded ? 'Read less' : 'Read more'}
-                </button>
-            )}
+            <ExpandableText text={text} maxLength={maxLength} />
         </div>
     );
-};
+}
 
 export default Comment;
