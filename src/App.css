@@ -44,11 +44,35 @@ body{
   width: fit-content;
 }
 
-.nav_ul li span{
+.nav-span{
   color: rgb(40, 40, 40);
   cursor: pointer;
   font-size: 17px;
   font-weight: bold;
+  position: relative;
+}
+
+.nav-span:after{
+  content: "";
+  position: absolute;
+  background-color: var(--mainColor);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+.nav-span:hover:after{
+  width: 100%;
+}
+
+.nav-span:hover{
+  color: var(--mainColor);
+}
+
+.scrolled{
+  font-weight: normal;
 }
 
 .nav_btn{
@@ -410,19 +434,28 @@ p{
 }
 
 .tour-information-container{
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
   margin-bottom: 80px;
+  gap: 50px; /* Satırlar ve sütunlar arasındaki boşluk */
+  grid-column-gap: 10px; /* Sadece sütunlar arasındaki boşluk */
 }
 
 .tour-information-item{
+  flex: 1 1 45%;
+  max-width: 90%;
   background-color: #e9e9e9;
-  width: 45%;
   border-radius: 5% 5% 5% 5%;
   text-align: center;
   box-shadow: 0 1px 1px rgb(218, 218, 218);
   padding-bottom: 15px;
+  align-self: start;
+  
+  justify-self: center; /* Elemanı yatayda merkezlemek için */
+  margin-left: auto; /* Sol kenardan eşit boşluk */
+  margin-right: auto; /* Sağ kenardan eşit boşluk */
 }
+
 
 .tour-information-item img{
   width: 100%;

@@ -1,6 +1,6 @@
 import React from "react";
 import BookingButton from "./BookingButton";
-import BookingSection from "./BookingSection";
+import ReservationForm from "./ReservationForm";
 
 const Banner = () => {
     return(
@@ -15,7 +15,7 @@ const Banner = () => {
             <div className="banner-booking-div">
                 <p className="booking-text"> If you would like to book a tour but your start time is unavailable, please contact us so 
                 we can book your tour for you.</p>
-                <BookingSection/>
+                <ReservationForm/>
                 <BookingButton/>
             </div>
         </div>

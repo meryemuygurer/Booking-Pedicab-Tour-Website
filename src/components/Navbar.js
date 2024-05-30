@@ -16,8 +16,14 @@ function Navbar() {
             const offset = window.scrollY;
             if (offset > 0){
                 setIsSticky(true);
+                document.querySelectorAll('.nav-span').forEach((el) => {
+                    el.classList.add('scrolled');
+                });
             }else {
                 setIsSticky(false);
+                document.querySelectorAll('.nav-span').forEach((el) => {
+                    el.classList.remove('scrolled');
+                });
             }
         };
 
@@ -38,7 +44,7 @@ function Navbar() {
             </div>
             <ul className= "nav_ul" ref={navRef}>
                 {navItemList.map((navItem, index) => (
-                    <li className={`nav_${navItem}`} key={index}> <span> {navItem} </span> </li>
+                    <li className={`nav_${navItem}`} key={index}> <span className="nav-span"> {navItem} </span> </li>
                 ))}
                 <button className="nav_btn nav_close_btn" onClick={showNav}>
                     <FaTimes/>

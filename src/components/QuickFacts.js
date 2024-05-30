@@ -1,5 +1,5 @@
 import React from "react";
-import { FaDollarSign, FaBan, FaCheck, FaMoneyBill, FaFileContract } from "react-icons/fa";
+import { FaDollarSign, FaBan, FaCheck, FaMoneyBill } from "react-icons/fa";
 
 function QuickFacts(){
     return(

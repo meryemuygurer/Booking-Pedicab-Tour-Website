@@ -69,12 +69,10 @@ function TourInformation(){
                     <p>$120.00</p>
                     <ExpandableText text={fullText2} maxLength={maxLength} buton1={buton1} buton2={buton2} />
                 </div>
-            </div>
-            <div className="tour-information-container">
                 <div className="tour-information-item">
                     <img src={imgg} alt='abc'></img>
-                    <p className='bold'>Central Park • 1 Hour Pedicab Tour (3 Stops)</p>
-                    <p>$80.00</p>
+                    <p className='bold'>Central Park • 1.5 Hour Pedicab Tour (5 Stops) </p>
+                    <p>$120.00</p>
                     <ExpandableText text={fullText3} maxLength={maxLength} buton1={buton1} buton2={buton2} />
                 </div>
                 <div className="tour-information-item">
