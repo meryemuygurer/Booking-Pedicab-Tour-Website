@@ -47,6 +47,7 @@ function Navbar() {
             <button className="nav_btn" onClick={showNav} ref={unvisibleButton} >
                 <FaBars/>
             </button>
+            
         </div> 
     )
 }

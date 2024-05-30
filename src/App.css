@@ -110,9 +110,10 @@ body{
 .banner-text h2{
   font-weight: 300;
 }
-
+/*
 .booking-button{
   position: relative; /* Gereklidir, böylece ::before bu butona göre konumlandırılır */
+  /*
   display: inline-block;
   overflow: hidden;
   font-size: 20px;
@@ -138,6 +139,7 @@ body{
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
   transition: transform 0.5s ease; /* Animasyon efekti */
+  /*
   transform: scaleX(0);
   transform-origin: right;
   z-index: 3;
@@ -145,7 +147,56 @@ body{
 
 .booking-button:hover .animation {
   transform: scaleX(1); /* Hover olduğunda genişleme animasyonu */
+  /*
   transform-origin: left;
+}
+*/
+
+.booking-button {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: var(--mainColor);
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid var(--mainColor);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: color 0.4s, background-color 0.4s;
+  cursor: pointer;
+}
+
+/* Butonun iç kısmı */
+.booking-button a {
+  position: relative;
+  z-index: 1;
+  color: var(--mainColor);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.booking-button:hover a{
+  transition: 1s;
+  color: white;
+}
+
+/* Butonun altındaki overlay */
+.booking-button::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 0;
+  transition: transform 0.4s;
+  transform: translateY(-100%);
+}
+
+/* Hover efekti */
+.booking-button:hover::before {
+  transform: translateY(0);
 }
 
 .banner-booking-div{
@@ -323,8 +374,9 @@ p{
   padding: 5px;
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid gray;
+  border: 1px solid var(--mainColor);
   transition: 0.3s;
+  color: var(--mainColor);
 }
 
 .readmore-button:hover{
@@ -334,6 +386,11 @@ p{
 
 .quick-facts-container{
   padding: 30px;
+  margin-bottom: 50px;
+}
+
+.quick-facts-container hr{
+  margin-top: 80px;
 }
 
 .quick-facts-container p{
@@ -355,6 +412,7 @@ p{
 .tour-information-container{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 80px;
 }
 
 .tour-information-item{
@@ -362,6 +420,8 @@ p{
   width: 45%;
   border-radius: 5% 5% 5% 5%;
   text-align: center;
+  box-shadow: 0 1px 1px rgb(218, 218, 218);
+  padding-bottom: 15px;
 }
 
 .tour-information-item img{
@@ -382,7 +442,7 @@ p{
 .booking-section-container select, input{
   outline: none;
   border: none;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--mainColor);
   padding: 10px;  
 }
 
@@ -395,10 +455,19 @@ p{
 
 .booking-section-element span{
   font-size: 12px;
-  color: var(--mainColor);
+  
 }
 
-option{
+.booking-section-container select:valid, .booking-section-container input::placeholder {
+  color: black; /* Selected option text color */
+}
+
+.custom-date-picker::-webkit-calendar-picker-indicator{
+  cursor: pointer;
+}
+
+.bold{
+  font-weight: bold;
   color: var(--mainColor);
 }
 

@@ -20,10 +20,11 @@ function QuickFacts(){
                 <FaMoneyBill color="#c90005" size={25} />
                 <p>We do not accept any payment in advance from our clients, payment (USD) is due at the end of the tour.</p>
             </div>
-            <div className="quick-facts-element">
+            
+            {/* <div className="quick-facts-element">
                 <FaFileContract color="#c90005" size={25} />
                 <p>For more information click here: <a href="#">"Terms & Conditions"</a></p>
-            </div>
+            </div> */}
             <hr></hr>
         </div>
     )

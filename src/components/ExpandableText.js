@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ExpandableText({ text, maxLength = 300 }) {
+function ExpandableText({ text, maxLength = 300, buton1, buton2 }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -15,7 +15,7 @@ function ExpandableText({ text, maxLength = 300 }) {
       <p className="display-text">{displayText}</p>
       {shouldTruncate && (
         <button className="readmore-button" onClick={toggleExpand}>
-          {isExpanded ? 'Read less' : 'Read more'}
+          {isExpanded ? buton1 : buton2 }
         </button>
       )}
     </div>

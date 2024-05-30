@@ -2,10 +2,9 @@ import React from "react";
 
 const BookingButton = () => {
     return(
-        <button className="booking-button"> 
-            <span>Booking</span> 
-            <div className="animation"></div>
-        </button>
+        <li className="booking-button"> 
+            <a>Booking</a> 
+        </li>
     )
 }
 export default BookingButton;
