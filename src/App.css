@@ -35,6 +35,7 @@ body{
 
 .nav_ul{
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 50px;
 }

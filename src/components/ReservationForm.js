@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import DateInput from "./DateInput";
 
@@ -6,13 +6,41 @@ function ReservationForm(){
   const [time, setTime] = useState("");
   const [tourType, setTourType] = useState("");
   const [guests, setGuests] = useState("");
+  const [timeSlots, setTimeSlots] = useState([]);
 
-  const timeSlots = [
+  const initialTimeSlots = [
     '09:00 - 10:00',
     '11:00 - 12:00',
     '13:00 - 14:00',
     '15:00 - 16:00',
   ];
+
+  const tourTimeSlots = {
+    '1-hour': [
+      '09:00 - 10:00',
+      '11:00 - 12:00',
+      '13:00 - 14:00',
+      '15:00 - 16:00',
+    ],
+    '1.5-hour': [
+      '09:00 - 10:30',
+      '11:00 - 12:30',
+      '13:00 - 14:30',
+      '15:00 - 16:30',
+    ],
+    'new-york': [
+      '09:00 - 12:00',
+      '13:00 - 16:00',
+    ],
+  };
+
+  useEffect(() => {
+    if (tourType) {
+      setTimeSlots(tourTimeSlots[tourType]);
+    } else {
+      setTimeSlots(initialTimeSlots);
+    }
+  }, [tourType]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
