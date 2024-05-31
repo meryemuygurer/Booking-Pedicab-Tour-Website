@@ -1,5 +1,8 @@
 import React from 'react';
-import imgg from '../assets/images/tour-info-img-1.jpg'
+import img1 from '../assets/images/tour-info-img-1.jpg'
+import img2 from '../assets/images/tour-info-img-2.jpg'
+import img3 from '../assets/images/tour-info-img-3.jpeg'
+import img4 from '../assets/images/tour-info-img-4.jpg'
 import ExpandableText from './ExpandableText';
 
 function TourInformation(){
@@ -58,25 +61,25 @@ function TourInformation(){
             <h2 className='tour-information-header'>OUR TOUR DESCRIPTIONS</h2>
             <div className="tour-information-container">
                 <div className="tour-information-item">
-                    <img src={imgg} alt='abc'></img>
+                    <img src={img1} alt='abc'></img>
                     <p className='bold'>Central Park • 1 Hour Pedicab Tour (3 Stops)</p>
                     <p>$80.00</p>
                     <ExpandableText text={fullText1} maxLength={maxLength} buton1={buton1} buton2={buton2} />
                 </div>
                 <div className="tour-information-item">
-                    <img src={imgg} alt='abc'></img>
+                    <img src={img2} alt='abc'></img>
                     <p className='bold'>Central Park • 1.5 Hour Pedicab Tour (5 Stops) </p>
                     <p>$120.00</p>
                     <ExpandableText text={fullText2} maxLength={maxLength} buton1={buton1} buton2={buton2} />
                 </div>
                 <div className="tour-information-item">
-                    <img src={imgg} alt='abc'></img>
+                    <img src={img3} alt='abc'></img>
                     <p className='bold'>Central Park • 1.5 Hour Pedicab Tour (5 Stops) </p>
                     <p>$120.00</p>
                     <ExpandableText text={fullText3} maxLength={maxLength} buton1={buton1} buton2={buton2} />
                 </div>
                 <div className="tour-information-item">
-                    <img src={imgg} alt='abc'></img>
+                    <img src={img4} alt='abc'></img>
                     <p className='bold'>Central Park • 1.5 Hour Pedicab Tour (5 Stops) </p>
                     <p>$120.00</p>
                     <ExpandableText text={fullText4} maxLength={maxLength} buton1={buton1} buton2={buton2} />

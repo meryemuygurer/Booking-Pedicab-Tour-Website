@@ -6,6 +6,7 @@ import SliderGallery from './components/SliderGallery';
 import CommentsList from './components/CommentsList';
 import TourInformation from './components/TourInformation';
 import QuickFacts from './components/QuickFacts';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <QuickFacts/>
       <TourInformation/>
       <CommentsList/>
+      <Footer/>
     </div>
   )
 }

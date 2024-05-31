@@ -1,22 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 
-const DateInput = () => {
+const DateInput = ({ onDateChange }) => {
   const dateInputRef = useRef(null);
 
   useEffect(() => {
     const dateInput = dateInputRef.current;
 
-    // Bugünün tarihini al
     const todaysDate = new Date();
 
-    // Tarihi "YYYY-MM-DD" formatına dönüştür
     const formattedDate = getFormattedDate(todaysDate);
 
-    // Tarih input'unun değerini güncelle
     if (dateInput) {
       dateInput.value = formattedDate;
+      onDateChange(formattedDate);
     }
-  }, []);
+  }, [onDateChange]); 
 
   const getFormattedDate = (date) => {
     const year = date.getFullYear();
@@ -30,11 +28,16 @@ const DateInput = () => {
     return `${year}-${month}-${day}`;
   };
 
+  const handleChange = (e) => {
+    onDateChange(e.target.value);
+  };
+
   return (
     <input
       type="date"
       id="pickDate"
       ref={dateInputRef}
+      onChange={handleChange}
     />
   );
 };
