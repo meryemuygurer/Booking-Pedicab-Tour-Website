@@ -7,15 +7,19 @@ import CommentsList from './components/CommentsList';
 import TourInformation from './components/TourInformation';
 import QuickFacts from './components/QuickFacts';
 import Footer from './components/Footer';
+import CalendlyPopupWidget from './components/CalendlyPopupWidget';
+import Meetup from './components/Meetup';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>  
       <Banner/>
+      <CalendlyPopupWidget/>
       <SliderGallery/>
       <QuickFacts/>
       <TourInformation/>
+      <Meetup/>
       <CommentsList/>
       <Footer/>
     </div>

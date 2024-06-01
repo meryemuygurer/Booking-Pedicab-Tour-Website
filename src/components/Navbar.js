@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { useRef } from "react";
 import  { useState } from "react";
 import { useEffect } from "react";
-import BookingButton from "./BookingButton";
 
 function Navbar() {
     const navItemList = ['home', 'references', 'services'];
@@ -47,7 +46,6 @@ function Navbar() {
                 {navItemList.map((navItem, index) => (
                     <li className={`nav_${navItem}`} key={index}> <span className="nav-span"> {navItem} </span> </li>
                 ))}
-                <BookingButton/>
                 <button className="nav_btn nav_close_btn" onClick={showNav}>
                     <FaTimes/>
                 </button>

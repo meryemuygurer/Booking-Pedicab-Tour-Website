@@ -1,6 +1,5 @@
 import React from "react";
-import BookingButton from "./BookingButton";
-import ReservationForm from "./ReservationForm";
+import CustomCalendlyButton from "./CustomCalendlyButton";
 
 const Banner = () => {
     return(
@@ -15,8 +14,7 @@ const Banner = () => {
             <div className="banner-booking-div">
                 <p className="booking-text"> If you would like to book a tour but your start time is unavailable, please contact us so 
                 we can book your tour for you.</p>
-                <ReservationForm/>
-                <BookingButton/>
+                <CustomCalendlyButton/>
             </div>
         </div>
     );

@@ -136,8 +136,10 @@ body{
   font-weight: 300;
 }
 
-.booking-button {
-  display: inline-block;
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 6px 12px;
   background-color: var(--mainColor);
   text-align: center;
@@ -148,11 +150,15 @@ body{
   position: relative;
   transition: color 0.4s, background-color 0.4s;
   cursor: pointer;
+  width: 120px;
+  height: 50px;
 }
 
-.booking-button button {
-  position: relative;
-  z-index: 1;
+.row{
+  display: flex;
+}
+
+.custom-calendly-button {
   color: var(--mainColor);
   letter-spacing: 1px;
   font-weight: bold;
@@ -161,14 +167,15 @@ body{
   outline: none;
   background-color: transparent;
   font-size: 15px;
+  z-index: 1;
 }
 
-.booking-button:hover button{
+.button-div:hover button{
   transition: 1s;
   color: white;
 }
 
-.booking-button::before {
+.button-div::before {
   content: '';
   position: absolute;
   top: 100%;
@@ -181,12 +188,14 @@ body{
   transform: translateY(-100%);
 }
 
-/* Hover efekti */
-.booking-button:hover::before {
+.button-div:hover::before {
   transform: translateY(0);
 }
 
 .banner-booking-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: 1;
   bottom: 10px;
@@ -200,6 +209,10 @@ body{
   margin-top:200px;
 }
 
+.banner-booking-div h3{
+  margin-bottom: 20px;
+}
+
 .booking-text{
   margin-bottom: 30px;
   font-size: 16px;
@@ -208,7 +221,6 @@ body{
 .slider{
   position: relative;
   display: flex;
-  background-color: #e9e9e9;
   width: 100%;
   padding: 50px 30px 30px 30px;
   overflow: scroll;
@@ -335,7 +347,7 @@ body{
 }
 
 .comments-container {
-  padding: 30px;
+  padding: 0 30px;
 }
 
 .row{
@@ -363,11 +375,12 @@ p{
   border-radius: 8px;
   border: 1px solid var(--mainColor);
   transition: 0.3s;
-  color: var(--mainColor);
+  color: white;
+  background-color: var(--mainColor);
 }
 
 .readmore-button:hover{
-  background-color: rgb(179, 177, 177);
+  background-color: var(--mainColorLight);
   transition: 0.3s;
 }
 
@@ -399,7 +412,6 @@ p{
 .tour-information-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-  margin-bottom: 80px;
   gap: 50px; 
   grid-column-gap: 10px;
 }
@@ -407,7 +419,7 @@ p{
 .tour-information-item{
   flex: 1 1 45%;
   max-width: 90%;
-  background-color: #e9e9e9;
+  background-color: #ffffff;
   border-radius: 5% 5% 5% 5%;
   text-align: center;
   box-shadow: 0 1px 1px rgb(218, 218, 218);
@@ -420,7 +432,7 @@ p{
 
 .tour-information-item img{
   width: 100%;
-  max-height: 400px;
+  height: 380px;
   border-radius: 5% 5% 0 0;
 }
 
@@ -473,6 +485,54 @@ footer{
 .footer-p, .terms{
   font-weight: 200;
   font-size: 13px;
+}
+
+.meetup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.meetup hr{
+  width: 100%;
+  margin:100px ;
+}
+
+.meetup-content{
+  padding: 10px 30px;
+}
+
+.meetup-content p{
+  text-align: left;
+}
+
+.meetup h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: var(--mainColor);
+}
+
+.meetup-img{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.meetup-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex:1 ;
+}
+
+.smaller-p{
+  font-weight: 200;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 1024px) {

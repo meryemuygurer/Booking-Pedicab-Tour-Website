@@ -54,8 +54,8 @@ function TourInformation(){
     
     * For City Tours Only: If you are within 5 minutes of the meetup/drop-off location we are happy to pick you up at your hotel. Please let us know in advance.`
 
-    const buton1 = 'click for hide'
-    const buton2 = 'click for more info'
+    const buton1 = 'Hide'
+    const buton2 = 'Read More'
     return(
         <>
             <h2 className='tour-information-header'>OUR TOUR DESCRIPTIONS</h2>

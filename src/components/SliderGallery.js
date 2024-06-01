@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Pictures from '../Pictures';
+import Pictures1 from '../Pictures1';
 function SliderGallery() {
     
     const [activeIndex, setActiveIndex ] = useState(null)
@@ -9,11 +9,11 @@ function SliderGallery() {
     }
 
     const handleNext = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % Pictures.length);
+        setActiveIndex((prevIndex) => (prevIndex + 1) % Pictures1.length);
     };
 
     const handlePrev = () => {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + Pictures.length) % Pictures.length);
+        setActiveIndex((prevIndex) => (prevIndex - 1 + Pictures1.length) % Pictures1.length);
     };
 
     const handleClose = () => {
@@ -23,7 +23,7 @@ function SliderGallery() {
     return (
         <div className="slider">
             <p className='slider-p '>Discover The Magic Of Central Park</p>
-            {Pictures.map((picture, index) => (
+            {Pictures1.map((picture, index) => (
                 <div className={`slider-item ${index === activeIndex ? 'slider-item-active' : ''} `} key={index}>
                     <img className={`${activeIndex === index ? "bigger-img" : activeIndex === null ? "slider-img" : "hidden"}`}  src={picture.src} alt={picture.alt} onClick={() => handleClick(index)} />
                 </div>
