@@ -535,6 +535,13 @@ footer{
   font-size: 12px;
 }
 
+.select-tour{
+  outline: none;
+  border: none;
+  margin: 0 0 5px 5px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1024px) {
   .nav_btn{
     display: block;

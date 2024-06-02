@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const CustomCalendlyButton = () => {
   const [tour, setTour] = useState('');
@@ -8,6 +8,27 @@ const CustomCalendlyButton = () => {
     tour2: 'https://calendly.com/hmuygurer347/1-5-hour-tour',
     tour3: 'https://calendly.com/hmuygurer347/30min',
   };
+
+  useEffect(() => {
+    // Calendly script dosyasını sayfaya ekleyin
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Script yüklendikten sonra initPopupWidget'ın varlığını kontrol edin
+    script.onload = () => {
+      if (window.Calendly && window.Calendly.initPopupWidget) {
+        console.log("Calendly script loaded successfully");
+      } else {
+        console.error("Calendly script failed to load");
+      }
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const openPopupWidget = () => {
     const url = tourLinks[tour];
@@ -23,8 +44,8 @@ const CustomCalendlyButton = () => {
       <div className="tour-selection">
         <label>
           Select Tour:
-          <select value={tour} onChange={(e) => setTour(e.target.value)}>
-            <option value="">Select</option>
+          <select className='select-tour' value={tour} onChange={(e) => setTour(e.target.value)}>
+            <option value="" disabled hidden>Select</option>
             <option value="tour1">Tour 1</option>
             <option value="tour2">Tour 2</option>
             <option value="tour3">Tour 3</option>
@@ -36,6 +57,10 @@ const CustomCalendlyButton = () => {
           Booking
         </button>
       </div>
+      <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
+      />
       <style>{`
         .custom-calendly-button {
           background-color: none;

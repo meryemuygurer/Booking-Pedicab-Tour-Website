@@ -14,15 +14,14 @@ const CalendlyPopupWidget = () => {
         window.Calendly.initBadgeWidget({
           url: 'https://calendly.com/hmuygurer347/deneme',
           text: 'booking',
-          color: '#0069ff',
-          textColor: '#ffffff',
+          color: '#fff',
+          textColor: 'black',
           branding: undefined
         });
       }
     };
 
     return () => {
-      // Bileşen kaldırıldığında script'i temizleyin
       document.body.removeChild(script);
     };
   }, []);
