@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const CustomCalendlyButton = () => {
   const [tour, setTour] = useState('');
+  const [showFixedButton, setShowFixedButton] = useState(false);
 
   const tourLinks = {
     tour1: 'https://calendly.com/hmuygurer347/deneme',
@@ -10,33 +11,45 @@ const CustomCalendlyButton = () => {
   };
 
   useEffect(() => {
-    // Calendly script dosyasını sayfaya ekleyin
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     document.body.appendChild(script);
 
-    // Script yüklendikten sonra initPopupWidget'ın varlığını kontrol edin
-    script.onload = () => {
-      if (window.Calendly && window.Calendly.initPopupWidget) {
-        console.log("Calendly script loaded successfully");
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowFixedButton(true);
       } else {
-        console.error("Calendly script failed to load");
+        setShowFixedButton(false);
       }
     };
 
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
       document.body.removeChild(script);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const openPopupWidget = () => {
-    const url = tourLinks[tour];
+  const openPopupWidget = (url) => {
     if (url) {
       window.Calendly.initPopupWidget({ url });
     } else {
-      console.error('Please select a tour');
+      alert('Please select a tour');
     }
+  };
+
+  const handleBookingClick = () => {
+    if (tour) {
+      openPopupWidget(tourLinks[tour]);
+    } else {
+      alert('Please select a tour');
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -52,10 +65,19 @@ const CustomCalendlyButton = () => {
           </select>
         </label>
       </div>
-      <div className="button-div">
-        <button onClick={openPopupWidget} className="custom-calendly-button">
-          Booking
-        </button>
+      <div className="row">
+        <div className="button-div">
+          <button onClick={handleBookingClick} className="custom-calendly-button">
+            Booking
+          </button>
+        </div>
+        {showFixedButton && (
+          <div className="button-div fixed-button">
+            <button onClick={scrollToTop} className="custom-calendly-button">
+              Booking
+            </button>
+          </div>
+        )}
       </div>
       <link
         href="https://assets.calendly.com/assets/external/widget.css"
@@ -63,23 +85,17 @@ const CustomCalendlyButton = () => {
       />
       <style>{`
         .custom-calendly-button {
-          background-color: none;
-          color: #c90005;
-          border: none;
-          border-radius: 5px;
-          position: relative;
-          z-index: 1;
+          color: var(--mainColor);
           letter-spacing: 1px;
           font-weight: bold;
           cursor: pointer;
+          border: none;
           outline: none;
           background-color: transparent;
           font-size: 15px;
+          z-index: 1;
         }
-        .custom-calendly-button:hover {
-          background-color: #c90005;
-          color: #ffffff;
-        }
+
         .button-div {
           display: flex;
           justify-content: center;
@@ -94,11 +110,15 @@ const CustomCalendlyButton = () => {
           position: relative;
           transition: color 0.4s, background-color 0.4s;
           cursor: pointer;
+          width: 120px;
+          height: 50px;
         }
+
         .button-div:hover button {
           transition: 1s;
           color: white;
         }
+
         .button-div::before {
           content: '';
           position: absolute;
@@ -111,9 +131,21 @@ const CustomCalendlyButton = () => {
           transition: transform 0.4s;
           transform: translateY(-100%);
         }
+
         .button-div:hover::before {
           transform: translateY(0);
         }
+
+        .row {
+          display: flex;
+        }
+
+        .fixed-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+        }
+
         .tour-selection {
           margin-bottom: 10px;
         }

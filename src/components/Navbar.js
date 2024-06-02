@@ -1,11 +1,9 @@
 import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useRef } from "react";
-import  { useState } from "react";
-import { useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 
 function Navbar() {
-    const navItemList = ['home', 'references', 'services'];
+    const navItemList = ['Tour İnformation', 'About Us', 'Reviews', 'Contact '];
     const navRef = useRef();
     const unvisibleButton = useRef();
 

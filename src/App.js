@@ -7,16 +7,15 @@ import CommentsList from './components/CommentsList';
 import TourInformation from './components/TourInformation';
 import QuickFacts from './components/QuickFacts';
 import Footer from './components/Footer';
-import CalendlyPopupWidget from './components/CalendlyPopupWidget';
 import Meetup from './components/Meetup';
 import SliderGallery2 from './components/SliderGallery2';
 import SliderGallery3 from './components/SliderGallery3';
-import FixedButton from './components/FixedButton';
+import AboutUs from './components/AboutUs';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <div className="App">
-      <FixedButton/>
       <Navbar/>  
       <Banner/>
       <SliderGallery1/>
@@ -25,7 +24,9 @@ function App() {
       <TourInformation/>
       <Meetup/>
       <SliderGallery3/>
+      <AboutUs/>
       <CommentsList/>
+      <Contact/>
       <Footer/>
     </div>
   )

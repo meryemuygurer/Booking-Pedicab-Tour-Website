@@ -30,7 +30,6 @@ body{
 .sticky{
   background-color: white;
   box-shadow: 0 1px 1px rgb(230, 230, 230);
-
 }
 
 .nav_ul{
@@ -51,6 +50,8 @@ body{
   font-size: 17px;
   font-weight: bold;
   position: relative;
+  display: flex;
+  text-align: center;
 }
 
 .nav-span:after{
@@ -331,6 +332,92 @@ body{
   transform: rotate(180deg);
 }
 
+.about-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-us h2{
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--mainColor);
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.our-story-img{
+  max-width: 700px;
+  margin: 0 20px;
+  opacity: 0.3;
+  border-radius: 15px;
+}
+
+.our-story{
+  margin-bottom: 60px;
+}
+
+.row-x{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  justify-content: space-evenly;
+}
+
+.row-x hr{
+  flex-grow: 1;
+  height: 2px;
+  background-color: black;
+  border: none;
+  width: 100%;
+  margin: 50px;
+}
+
+.row-x .left-hr {
+  margin-right: 10px;
+}
+
+.row-x .right-hr {
+  margin-left: 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.overlay-text p{
+  color: black;
+}
+
+.why-choose, .meet-guides{
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+.why-choose p, .meet-guides p{
+  text-align: left;
+}
+
+.why-choose img, .meet-guides img{
+  margin-right: 30px;
+  width: 350px;
+  border-radius: 15px;
+}
+
 .comment {
   margin: 10px 0;
   padding: 10px;
@@ -487,6 +574,57 @@ footer{
   font-size: 13px;
 }
 
+.terms span{
+  cursor: pointer;
+}
+
+.terms span:hover{
+  color: var(--mainColor);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50% ;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  outline: none;
+}
+
+.modal h2{
+  text-align: center;
+}
+
+.modal p{
+  text-align: left;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: 'rgba(0, 0, 0, 0.75)';
+  z-Index: 1000;
+}
+
+.close-modal{
+  border: 1px solid black;
+  padding: 3px 5px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
 .meetup{
   display: flex;
   flex-direction: column;
@@ -542,6 +680,29 @@ footer{
   cursor: pointer;
 }
 
+.contact {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info p{
+  margin-bottom: 7px;
+  font-weight: 300;
+}
+
+.contact-info h3{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+
+
 @media only screen and (max-width: 1024px) {
   .nav_btn{
     display: block;
@@ -570,6 +731,14 @@ footer{
 
   .responsive_nav{
     transform: translateX(0);
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+  }
+
+  .nav-span{
+    display: inline-block;
   }
 
 }
