@@ -48,7 +48,7 @@ body{
   color: rgb(40, 40, 40);
   cursor: pointer;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: b500;
   position: relative;
   display: flex;
   text-align: center;
@@ -310,6 +310,7 @@ body{
   position: fixed;
   text-align: center;
   background-color: transparent;
+  color: white;
 }
 
 .close-btn {
@@ -331,7 +332,98 @@ body{
   width: 60px;
   transform: rotate(180deg);
 }
+/*
+.about-us{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 
+.about-us h2{
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--mainColor);
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.our-story-img{
+  max-width: 700px;
+  margin: 0 20px;
+  opacity: 0.3;
+  border-radius: 15px;
+}
+
+.our-story{
+  margin-bottom: 60px;
+}
+
+.row-x{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  justify-content: space-evenly;
+}
+
+.row-x hr{
+  flex-grow: 1;
+  height: 2px;
+  background-color: black;
+  border: none;
+  width: 100%;
+  margin: 50px;
+}
+
+.row-x .left-hr {
+  margin-right: 10px;
+}
+
+.row-x .right-hr {
+  margin-left: 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.overlay-text p{
+  color: black;
+}
+
+.why-choose, .meet-guides{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  width: 50%;
+  border-radius: 15px;
+  height: 900px;
+}
+
+.why-choose p, .meet-guides p{
+  text-align: left;
+}
+
+.why-choose img, .meet-guides img{
+  margin-right: 30px;
+  width: 70%;
+  border-radius: 15px;
+}
+*/
 .about-us{
   display: flex;
   flex-direction: column;
@@ -417,7 +509,6 @@ body{
   width: 350px;
   border-radius: 15px;
 }
-
 .comment {
   margin: 10px 0;
   padding: 10px;
@@ -605,6 +696,7 @@ footer{
 
 .modal p{
   text-align: left;
+  font-size: 12px;
 }
 
 .modal-overlay {

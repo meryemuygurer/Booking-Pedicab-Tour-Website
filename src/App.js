@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
@@ -14,22 +14,40 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 
 function App() {
+  const tourInfoRef = useRef(null);
+  const aboutUsRef = useRef(null);
+  const reviewsRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <div className="App">
-      <Navbar/>  
-      <Banner/>
-      <SliderGallery1/>
-      <QuickFacts/>
-      <SliderGallery2/>
-      <TourInformation/>
-      <Meetup/>
-      <SliderGallery3/>
-      <AboutUs/>
-      <CommentsList/>
-      <Contact/>
-      <Footer/>
+      <Navbar
+        tourInfoRef={tourInfoRef}
+        aboutUsRef={aboutUsRef}
+        reviewsRef={reviewsRef}
+        contactRef={contactRef}
+      />
+      <Banner />
+      <SliderGallery1 />
+      <QuickFacts />
+      <SliderGallery2 />
+      <div ref={tourInfoRef} style={{ padding: "20px" }}>
+        <TourInformation />
+      </div>
+      <Meetup />
+      <SliderGallery3 />
+      <div ref={aboutUsRef} style={{ padding: "20px" }}>
+        <AboutUs />
+      </div>
+      <div ref={reviewsRef} style={{ padding: "20px" }}>
+        <CommentsList />
+      </div>
+      <div ref={contactRef} style={{ padding: "20px" }}>
+        <Contact />
+      </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default App;
