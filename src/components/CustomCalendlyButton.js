@@ -5,8 +5,8 @@ const CustomCalendlyButton = () => {
   const [showFixedButton, setShowFixedButton] = useState(false);
 
   const tourLinks = {
-    tour1: 'https://calendly.com/hmuygurer347/deneme',
-    tour2: 'https://calendly.com/hmuygurer347/1-5-hour-tour',
+    tour1: 'https://calendly.com/hmuygurer347/30min',
+    tour2: 'https://calendly.com/hmuygurer347/30min',
     tour3: 'https://calendly.com/hmuygurer347/30min',
   };
 

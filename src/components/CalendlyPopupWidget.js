@@ -12,7 +12,7 @@ const CalendlyPopupWidget = () => {
     script.onload = () => {
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
-          url: 'https://calendly.com/hmuygurer347/deneme',
+          url: 'https://calendly.com/hmuygurer347/30min',
           text: 'booking',
           color: '#fff',
           textColor: 'black',
