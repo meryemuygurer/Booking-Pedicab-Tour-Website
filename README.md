@@ -2,6 +2,7 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Calendly](https://img.shields.io/badge/Calendly-4D4D4D?style=for-the-badge&logo=calendly&logoColor=white)  
+Vercel Link: https://booking-pedicab-tour-website.vercel.app/
 # **🚲 Booking‑Pedicab‑Tour Website**
 
 Hi there! I’m a 4th-year Computer Education and Instructional Technology (CEIT) student at Marmara University. This Booking‑Pedicab‑Tour Website is an interactive, fully responsive React web app I built to showcase real-world frontend skills.  
@@ -60,28 +61,18 @@ I also realized that even for a frontend project, thinking about UX and real use
 
 ## Application Screenshots
 
-### **School Page – Reviews + Review Form Visible**
-![Booking Popup Screenshot](src/assets/readme-images/Booking_popup.png)  
-Review form becomes visible when the user is a student or graduate of that university.  
-Demonstrates correct enforcement of business rules.
+### Booking popup in action with Calendly integration.
+![Booking Popup Screenshot](src/assets/readme-images/Booking-popup.png)  
 
+### Gallery slider with clickable thumbnails and enlarged view.
+![Gallery Slider Screenshot](src/assets/readme-images/Gallery-slider.png)  
 
-### **School Page – Reviews Visible, Form Hidden**
-![Gallery Slider Screenshot](assets/readme-images/Booking_popup.png)  
-Reviews are visible to all users.  
-Review form is hidden if the logged-in user does not belong to that school.
+###  Dynamic user reviews with toggle functionality.
+![User Reviews Screenshot](src/assets/readme-images/User-reviews.png)  
 
+###  Short demo showing the booking flow.
+![Demo Video Screenshot](src/assets/readme-images/Screen-video.gif)  
 
-### **Registration Page**
-![Registration Page Screenshot](images/registration-page.png)  
-Users select their university during registration.  
-Graduation status is collected and stored in the database.  
-This information is later used to control review permissions.
-
-### **Challenges & Key Takeaways**
-This journey wasn't without its hurdles:  
-Session Management: I spent a lot of time practicing how to carry user data across pages and terminate it securely upon logout.  
-Table Relations: Initially, setting up the reviews table was tricky, but working on the ERD helped everything click into place.
 
 ## 👩‍💻 About Me
-I’m a future educator and deve
+I’m a future educator and developer passionate about bridging the gap between learning and technology. I currently work as an IT Assistant at Marmara University’s IT Department, and I'm constantly building projects like this to push my technical limits further.
